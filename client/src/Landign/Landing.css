@@ -1,0 +1,20 @@
+.container_landing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container_body_landing{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container_image_landing{
+    width: 50%;
+    height: 50%;
+}
+.container_image_landing img{
+    width: 750px;
+    
+}

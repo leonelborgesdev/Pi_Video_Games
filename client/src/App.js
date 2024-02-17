@@ -1,9 +1,9 @@
-import { Landign } from "./Landign/Landign";
+import { Landing } from "./Landign/Landing.jsx";
 
 function App() {
   return (
     <div className="App">
-      <Landign />
+      <Landing />
     </div>
   );
 }

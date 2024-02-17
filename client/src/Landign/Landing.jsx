@@ -1,7 +1,8 @@
 import React from "react";
 import VideoGames from "../assets/VideoGames.png";
+import "./Landing.css";
 
-export const Landign = () => {
+export const Landing = () => {
   return (
     <div className="container_landing">
       <div className="landing_title">
