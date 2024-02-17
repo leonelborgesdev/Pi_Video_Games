@@ -3,15 +3,15 @@ import VideoGames from "../assets/VideoGames.png";
 
 export const Landign = () => {
   return (
-    <div>
-      <div>
+    <div className="container_landing">
+      <div className="landing_title">
         <h1>VideoGames</h1>
       </div>
-      <div>
-        <div>
+      <div className="container_body_landing">
+        <div className="container_detail_landing">
           <h2>Detalle de video games</h2>
         </div>
-        <div>
+        <div className="container_image_landing">
           <img src={VideoGames} alt="" />
         </div>
       </div>
