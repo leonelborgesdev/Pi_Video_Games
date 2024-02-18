@@ -51,5 +51,12 @@ export const updateVideoGame= async (req:Request, res:Response)=>{
     }
 }
 export const deleteVideoGame= async (req:Request, res:Response)=>{
-    
+    try {
+        const id= req.params.id;
+        await pool.query('DELETE FROM users WHERE id = $1',[id]);
+        return res.status(200).json({message: `Id: ${id} Videogame delete succesfully`})
+    } catch (error) {
+        console.log(error);
+        return res.status(400).json({message: "internal error"})
+    }
 }
