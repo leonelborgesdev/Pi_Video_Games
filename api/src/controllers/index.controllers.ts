@@ -24,8 +24,20 @@ export const getVideogameById= async (req:Request, res:Response): Promise<Respon
     }
 }
 
-export const createVideoGame= async (req:Request, res:Response)=>{
-    
+export const createVideoGame= async (req:Request, res:Response): Promise<Response>=>{
+    try {
+        const {ID, Nombre, Descripcion, Fecha_de_lanzamiento, Rating, Plataformas}=req.body;
+        const response: QueryResult= await pool.query(
+            'INSERT INTO videogames (ID, Nombre, Descripcion, Fecha_de_lanzamiento, Rating, Plataformas)'+
+            'VALUES ($1, $2, $3, $4, $5, $6)', [ID, Nombre, Descripcion, Fecha_de_lanzamiento, Rating, Plataformas ]);
+        return res.status(200).json({ message: 'VideoGame created succesfully',
+                body:{
+                    videogame:{ ID, Nombre, Descripcion, Fecha_de_lanzamiento, Rating, Plataformas }
+                }});
+    } catch (error) {
+        console.log(error);
+        return res.status(200).json({message: "internal error"});
+    }
 }
 export const updateVideoGame= async (req:Request, res:Response)=>{
     
