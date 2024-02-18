@@ -46,7 +46,7 @@ export const updateVideoGame= async (req:Request, res:Response)=>{
         await pool.query('UPDATE videogame SET Nombre = $1, Descripcion = $2, Fecha_de_lanzamiento = $3, Rating = $4, Plataformas=$5 WHERE ID= $6',[Nombre, Descripcion, Fecha_de_lanzamiento, Rating, Plataformas, id])
         return res.status(200).json({message: `Id: ${id} Videogame Update Successfully`})
     } catch (error) {
-        console.log(error)
+        console.log(error);
         return res.status(400).json({message: "internal error"})
     }
 }
