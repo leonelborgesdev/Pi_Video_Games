@@ -1,3 +1,4 @@
+import { AboutMe } from "./Components/AboutMe/AboutMe.jsx";
 import { CreateVideoGames } from "./Components/CreateVideoGames/CreateVideoGames.jsx";
 import { DeleteVideoGame } from "./Components/DeleteVideoGame/DeleteVideoGame.jsx";
 import { DetalleVideoGames } from "./Components/DetalleVideoGames/DetalleVideoGames.jsx";
@@ -14,7 +15,8 @@ function App() {
           <Route path="/videogames" element={<VideoGames />} />
           <Route path="/videogames/:id" element={<DetalleVideoGames />} />
           <Route path="/videogames/create" element={<CreateVideoGames />} />
-          <Route path="/vidoegames/delete" element={<DeleteVideoGame />} />
+          <Route path="/videogames/delete" element={<DeleteVideoGame />} />
+          <Route path="/videogames/aboutMe" element={<AboutMe />} />
         </Routes>
       </BrowserRouter>
     </div>
