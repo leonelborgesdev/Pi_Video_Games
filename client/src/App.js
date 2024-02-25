@@ -1,5 +1,5 @@
-import { Landing } from "./Landign/Landing.jsx";
-import { VideoGames } from "./VideoGames/VideoGames.jsx";
+import { Landing } from "./Components/Landign/Landing.jsx";
+import { VideoGames } from "./Components/VideoGames/VideoGames.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
